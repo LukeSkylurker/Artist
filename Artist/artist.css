@@ -1,0 +1,238 @@
+html {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+
+html::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+body {
+	width:100%;
+	height: 900px;
+	background: url("./background_3.png");
+	background-repeat: no-repeat;
+  background-size: cover;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+body::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+.img-only{
+box-shadow: 0px 0px 6px 1px black;
+}
+.img-container {
+	width: 21%;
+	height:  auto;
+	position: absolute;
+	top: -440px;
+	animation-name: example;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+}
+
+.img-container-2 {
+	width: 16%;
+	height: auto;
+	position: absolute;
+	top: -440px;
+	animation-name: example;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+}
+
+.img-container-3 {
+	width: 11%;
+	height: auto;
+	position: absolute;
+	top: -400px;
+	animation-name: example;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+
+.first-img-container {
+	left: 5%;
+	animation-name: example;
+ 	animation-duration: 16s;
+ 	animation-delay: 0s;
+
+}
+
+.second-img-container {
+	left: 21%;
+	animation-name: example;
+ 	animation-duration: 21s;
+ 	animation-delay: 4s;
+ 
+ 
+}
+.third-img-container {
+	left: 40%;
+	animation-name: example;
+ 	animation-duration: 25s;
+ 	animation-delay: 2s;
+}
+
+.fourth-img-container {
+	left: 75%;
+	animation-name: example;
+ 	animation-duration: 23s;
+ 	animation-delay: 7s;
+}
+
+.fifth-img-container {
+	left: 10%;
+	animation-name: example;
+ 	animation-duration: 39s;
+ 	animation-delay: 0s;
+}
+
+.sixth-img-container {
+	left: 29%;
+	animation-name: example;
+ 	animation-duration: 42s;
+ 	animation-delay: 7s;
+}
+
+.seventh-img-container {
+	left: 58%;
+	animation-name: example;
+ 	animation-duration: 39s;
+ 	animation-delay: 1s;
+}
+
+.eighth-img-container {
+	left: 74%;
+	animation-name: example;
+ 	animation-duration: 46s;
+ 	animation-delay: 3s;
+}
+
+.ninth-img-container {
+	left: 3%;
+	animation-name: example;
+ 	animation-duration: 76s;
+ 	animation-delay: 3s;
+}
+
+.tenth-img-container {
+	left: 14%;
+	animation-name: example;
+ 	animation-duration: 60s;
+ 	animation-delay: 0s;
+}
+
+.eleventh-img-container {
+	left: 28%;
+	animation-name: example;
+ 	animation-duration: 82s;
+ 	animation-delay: 0s;
+}
+
+.twelfth-img-container {
+	left: 51%;
+	animation-name: example;
+ 	animation-duration: 102s;
+ 	animation-delay: 0s;
+}
+.thirteenth-img-container {
+	left: 68%;
+	animation-name: example;
+ 	animation-duration: 123s;
+ 	animation-delay: 0s;
+}
+
+.fourteenth-img-container {
+	left: 84%;
+	animation-name: example;
+ 	animation-duration: 78s;
+ 	animation-delay: 0s;
+}
+
+@keyframes example {
+  100% {top:1050px;}
+}
+
+.artist-name {
+position:absolute; 
+left:40%; 
+width:20%; 
+font-family: 'Brush Script MT'; 
+opacity: 0.85; 
+z-index: 50; 
+font-size: 2.6em; 
+background-color: white; 
+top:0px; 
+text-align: center; 
+border-radius: 0px 0px 15px 15px; 
+padding-bottom: 12px; 
+padding-left: 10px; 
+padding-right: 10px;
+line-height: 0.9; 
+box-shadow: 0px 0px 8px 5px black;
+
+}
+
+.qr-code-placement {
+position:absolute; 
+right:0px; 
+top:0px;
+width:10%; 
+z-index: 50;
+background-color: white; 
+text-align: center; 
+box-shadow: 0px 0px 8px 5px black;
+}
+
+.artist-name span {
+font-size: 0.4em;
+font-family: Arial; 
+}
+
+.overlay {
+	border-radius: 0px 25px 25px 0px;
+	box-shadow: 0px 0px 6px 1px black;
+	background-color: #E6E3E2;
+	position: absolute; 
+	z-index: 50; 
+	width: 22%; 
+	background-color:white; 
+	height: auto; 
+	width: 0%; 
+	top: 10%; 
+	left: 0px;
+	text-align: center;
+	transition: 0.5s;
+}
+
+.myButton {
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
