@@ -36,7 +36,11 @@ box-shadow: 0px 0px 6px 1px black;
 	animation-name: example;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-	
+}
+
+.img-container:hover, .img-container-2:hover, .img-container-3:hover {
+	animation-name: example;
+    animation-play-state: paused;
 }
 
 .img-container-2 {
@@ -47,7 +51,6 @@ box-shadow: 0px 0px 6px 1px black;
 	animation-name: example;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-
 }
 
 .img-container-3 {
@@ -239,4 +242,9 @@ font-family: Arial;
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+
+.artist-name-link, .artist-name-link:link, .artist-name-link:visited, .artist-name-link:hover, .artist-name-link:active {
+	color:  black;
+	text-decoration: none;
 }
