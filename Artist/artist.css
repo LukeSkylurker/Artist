@@ -58,7 +58,7 @@ box-shadow: 0px 0px 6px 1px black;
 
 
 .first-img-container {
-	left: 5%;
+	left: 6%;
 	animation-name: example;
  	animation-duration: 16s;
  	animation-delay: 0s;
@@ -74,7 +74,7 @@ box-shadow: 0px 0px 6px 1px black;
  
 }
 .third-img-container {
-	left: 40%;
+	left: 43%;
 	animation-name: example;
  	animation-duration: 25s;
  	animation-delay: 2s;
