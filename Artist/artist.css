@@ -329,7 +329,7 @@ body {
 	width:100%;
 	position: fixed;
 	height: 100%;
-	background: url("./background_3_tablet.png");
+	background: url("./background_3_mobile.png");
 	background-repeat: no-repeat;
   background-size: 100%;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -414,7 +414,6 @@ body {
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
-
 }
 
 @media only screen and (max-width: 760px) {
