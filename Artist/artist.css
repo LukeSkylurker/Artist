@@ -15,7 +15,7 @@ body {
 	height: 900px;
 	background: url("./background_3.png");
 	background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
@@ -173,7 +173,7 @@ left:40%;
 width:20%; 
 font-family: 'Brush Script MT'; 
 opacity: 0.85; 
-z-index: 50; 
+z-index: 2; 
 font-size: 2.6em; 
 background-color: white; 
 top:0px; 
@@ -192,7 +192,7 @@ position:absolute;
 right:0px; 
 top:0px;
 width:10%; 
-z-index: 50;
+z-index: 2;
 background-color: white; 
 text-align: center; 
 box-shadow: 0px 0px 8px 5px black;
@@ -208,7 +208,7 @@ font-family: Arial;
 	box-shadow: 0px 0px 6px 1px black;
 	background-color: #E6E3E2;
 	position: absolute; 
-	z-index: 50; 
+	z-index: 2; 
 	width: 22%; 
 	background-color:white; 
 	height: auto; 
