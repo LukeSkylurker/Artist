@@ -248,3 +248,7 @@ font-family: Arial;
 	color:  black;
 	text-decoration: none;
 }
+
+.blur-effect {
+	filter: blur(4px);
+}
