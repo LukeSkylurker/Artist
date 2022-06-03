@@ -181,9 +181,9 @@ $(document).ready(function(){
 		console.log(imageLocation[i].loc);
 		$('.overlay-content').append('<img width="65%" src="' + imageLocation[i].loc + '"><p>About</p><br /><div class="art-description">' + imageLocation[i].description + '</div><br /><a class="myButton" href="'+ imageLocation[i].ecom + '" target="_blank">Prints</a><br /><br /><img width="40%" src="' + imageLocation[i].qr + '"><p>Buy from your phone</p>');
 	}
-	fetch('https://forms.googleapis.com/v1/forms/{1YgQO1DWC_qUpsQZhprYwgkPuALZvkClXliAUgpvcgec}/responses')
+	/*fetch('https://forms.googleapis.com/v1/forms/{1YgQO1DWC_qUpsQZhprYwgkPuALZvkClXliAUgpvcgec}/responses')
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => console.log(data));*/
 }
 
 });
