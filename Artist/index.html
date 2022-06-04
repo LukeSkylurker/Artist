@@ -8,6 +8,7 @@
 <script src="artphotos.js"></script>
 <script src="art.js"></script>
 <link rel="stylesheet" type="text/css" href="artist.css">
+<link rel="stylesheet" type="text/css" href="artist-bio.css">
 </head>
 <body>
 <div id="myNav" class="overlay">
@@ -66,13 +67,64 @@
 <!--End First Section-->
 </div>
 <div class="second-section">
-	<div>content</div>
+	 <section class="home-mast">
+  <div class="home-mast__container">
+    <div>
+      <div class="absolute-bg" style="background-image: url('photos/sarah_1.jpg');"></div>
+    </div>
+    <div class="">
+      <div class="absolute-bg" style="background-image: url('photos/sarah_2.jpg');"></div>
+    </div>
+    <div class="">
+      <div class="absolute-bg" style="background-image: url('photos/sarah_3.jpg');"></div>
+    </div>
+    <div class="">
+      <div class="absolute-bg" style="background-image: url('photos/sarah_4.jpg');"></div>
+    </div>
+  </div>
+</section>
 </div>
 <!--End All Contain-->
 </div>
 </body>
 </html>
 <script>
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+
 popImageA();
 popImageB();
 popImageC();
@@ -188,6 +240,9 @@ $(document).ready(function(){
 
 });
 });
+
+
+
 
 //$(document).ready(function(){ $(".artist-name").click(function(){$('.second-section').addClass('move-in-to-place');});});
 
