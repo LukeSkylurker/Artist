@@ -90,41 +90,6 @@
 </html>
 <script>
 
-// left: 37, up: 38, right: 39, down: 40,
-// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-function preventDefault(e) {
-  e.preventDefault();
-}
-
-function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
-}
-
-// modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
-try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
-  }));
-} catch(e) {}
-
-var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-// call this to Disable
-function disableScroll() {
-  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-}
-
-
 popImageA();
 popImageB();
 popImageC();
@@ -233,9 +198,7 @@ $(document).ready(function(){
 		console.log(imageLocation[i].loc);
 		$('.overlay-content').append('<img width="65%" src="' + imageLocation[i].loc + '"><p>About</p><br /><div class="art-description">' + imageLocation[i].description + '</div><br /><a class="myButton" href="'+ imageLocation[i].ecom + '" target="_blank">Prints</a><br /><br /><img width="40%" src="' + imageLocation[i].qr + '"><p>Buy from your phone</p>');
 	}
-	/*fetch('https://forms.googleapis.com/v1/forms/{1YgQO1DWC_qUpsQZhprYwgkPuALZvkClXliAUgpvcgec}/responses')
-  .then(response => response.json())
-  .then(data => console.log(data));*/
+
 }
 
 });
