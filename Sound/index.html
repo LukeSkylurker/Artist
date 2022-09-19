@@ -5,7 +5,7 @@
   integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
   crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body style="overflow:auto;">
 <div>
   Sound of Hello World
   <audio class="audio-stuff play" controls>
@@ -20,17 +20,18 @@ Your browser does not support the audio element.
 <source src="Test3.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
+
 <div id="testA" style="height: 400px; background-color:blue;">testing div 1 element</div>
 <div id="testB" style="height: 400px; background-color:green;">testing div 2 element</div>
 <div id="testC" style="height: 400px; background-color:pink;">testing div 3 element</div>
 <div id="testD" style="height: 1000px; background-color-grey;">the rest of the page</div>
 <body>
-
+</html>
 <script>
 $(document).on('scroll', function() {
     if($(this).scrollTop() >= $('#testA').position().top && $(this).scrollTop() <= $('#testB').position().top){
-        $('.audio-stuff').trigger("pause");
-        $('.play').trigger("play");
+      $('.audio-stuff').trigger("pause");
+      $('.play').trigger("play");
     } else if ( $(this).scrollTop() >= $('#testB').position().top && $(this).scrollTop() <= $('#testC').position().top) {
       $('.audio-stuff').trigger("pause");
       $('.play-two').trigger("play");
