@@ -1,0 +1,64 @@
+<html>
+<head>
+<script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+  </head>
+  <body style="overflow:auto;">
+<div>
+  Sound of Hello World
+  <audio class="audio-stuff play" id="audio" controls>
+  <source src="data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+<br />
+<br />
+
+
+<div id="testA" style="height: 700px; background-color:blue;">testing div 1 element</div>
+<div id="testB" style="height: 700px; background-color:green;">testing div 2 element</div>
+<div id="testC" style="height: 700px; background-color:pink;">testing div 3 element</div>
+<div id="testD" style="height: 2000px; background-color-grey;">the rest of the page</div>
+<body>
+</html>
+<script>
+  const track = ["Test1.mp3","Test2.mp3","Test3.mp3"];
+
+  $(document).on('scroll', function() {
+    var audio = document.getElementById('audio');
+      if($(this).scrollTop() >= $('#testA').position().top && $(this).scrollTop() <= $('#testB').position().top){
+        if (audio.src == track[0]) {
+          console.log('already playing track');
+        } else {
+        audio.src = track[0];
+        console.log(audio.src);
+        audio.play();
+      }
+      } else if ( $(this).scrollTop() >= $('#testB').position().top && $(this).scrollTop() <= $('#testC').position().top) {
+        if (audio.src == track[1]) {
+          console.log('already playing track');
+        } else {
+        audio.src = track[1];
+        console.log(audio.src);
+        audio.play();
+      }
+      }
+      else if ( $(this).scrollTop() >= $('#testC').position().top && $(this).scrollTop() <= $('#testD').position().top ) {
+        if (audio.src == track[2]) {
+          console.log('already playing track');
+        } else {
+        audio.src = track[2];
+        console.log(audio.src);
+        audio.play();
+      }
+      }
+      else {
+        console.log('nothing happening');
+      }
+  });
+  </script>
+</script>
+<style>
+
+  </style>
