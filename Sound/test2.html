@@ -28,7 +28,7 @@ Your browser does not support the audio element.
   $(document).on('scroll', function() {
     var audio = document.getElementById('audio');
       if($(this).scrollTop() >= $('#testA').position().top && $(this).scrollTop() <= $('#testB').position().top){
-        if (audio.src == track[0]) {
+        if (audio.src == "https://lukeskylurker.github.io/Artist/Sound/Test1.mp3") {
           console.log('already playing track');
         } else {
         audio.src = track[0];
@@ -36,7 +36,7 @@ Your browser does not support the audio element.
         audio.play();
       }
       } else if ( $(this).scrollTop() >= $('#testB').position().top && $(this).scrollTop() <= $('#testC').position().top) {
-        if (audio.src == track[1]) {
+        if (audio.src == "https://lukeskylurker.github.io/Artist/Sound/Test2.mp3") {
           console.log('already playing track');
         } else {
         audio.src = track[1];
@@ -45,7 +45,7 @@ Your browser does not support the audio element.
       }
       }
       else if ( $(this).scrollTop() >= $('#testC').position().top && $(this).scrollTop() <= $('#testD').position().top ) {
-        if (audio.src == track[2]) {
+        if (audio.src == "https://lukeskylurker.github.io/Artist/Sound/Test3.mp3") {
           console.log('already playing track');
         } else {
         audio.src = track[2];
