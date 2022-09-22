@@ -7,11 +7,18 @@
   </head>
   <body style="overflow:auto;">
 <div>
-  Sound of Hello World
-  <audio class="audio-stuff play" id="audio" controls>
+  <h1>Please click button below to hear audio throughout the presentation</h1>
+  <audio class="audio-stuff play" style="visibility:hidden;" id="audio" controls>
   <source src="data:audio/mpeg;base64,SUQzBAAAAAABEVRYWFgAAAAtAAADY29tbWVudABCaWdTb3VuZEJhbmsuY29tIC8gTGFTb25vdGhlcXVlLm9yZwBURU5DAAAAHQAAA1N3aXRjaCBQbHVzIMKpIE5DSCBTb2Z0d2FyZQBUSVQyAAAABgAAAzIyMzUAVFNTRQAAAA8AAANMYXZmNTcuODMuMTAwAAAAAAAAAAAAAAD/80DEAAAAA0gAAAAATEFNRTMuMTAwVVVVVVVVVVVVVUxBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQsRbAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/zQMSkAAADSAAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
+<h2 class="user-action" style="border: 2px solid black; width: 150px; padding: 20px; text-align: center;">BUTTON</h2>
+<script>
+$( ".user-action" ).click(function() {
+  audio.play();
+});
+  </script>
+
 <br />
 <br />
 
@@ -19,7 +26,7 @@ Your browser does not support the audio element.
 <div id="testA" style="height: 700px; background-color:blue;">testing div 1 element</div>
 <div id="testB" style="height: 700px; background-color:green;">testing div 2 element</div>
 <div id="testC" style="height: 700px; background-color:pink;">testing div 3 element</div>
-<div id="testD" style="height: 2000px; background-color-grey;">the rest of the page</div>
+<div id="testD" style="height: 2000px; background-color:grey;">the rest of the page</div>
 <body>
 </html>
 <script>
